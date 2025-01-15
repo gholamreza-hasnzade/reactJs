@@ -1,6 +1,7 @@
 // src/App.tsx
 import React, { useState } from 'react';
 import Button from './Button';
+import { FaBeer, FaCoffee } from 'react-icons/fa'; // Example icons from react-icons
 
 const App: React.FC = () => {
   const [loading, setLoading] = useState(false);
@@ -30,12 +31,17 @@ const App: React.FC = () => {
         color="info" 
         btnText="Info Button" 
         onClick={() => handleClick('Outlined', 'Info')} 
+        endIcon={<FaCoffee />} // End icon
+        startIcon={<FaBeer />} // Start icon
+
+
       />
       <Button 
         variant="text" 
         color="success" 
         btnText="Success Button" 
         onClick={() => handleClick('Text', 'Success')} 
+
       />
       <Button 
         variant="contained" 
