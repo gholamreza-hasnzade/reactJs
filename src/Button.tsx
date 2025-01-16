@@ -1,5 +1,6 @@
 // src/components/Button.tsx
 import React from 'react';
+import { AiOutlineLoading3Quarters } from "react-icons/ai";
 
 interface ButtonProps {
   variant: 'text' | 'contained' | 'outlined'; // Button variants
@@ -63,15 +64,7 @@ const Button: React.FC<ButtonProps> = ({
     >
       {loading ? (
         <span className="flex items-center">
-          <svg
-            className="animate-spin h-5 w-5 mr-2 text-white"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-          >
-            <circle className="opacity-25" cx="12" cy="12" r="10" fill="none" strokeWidth="4" stroke="currentColor" />
-            <path className="opacity-75" fill="currentColor" d="M4 12c0-4.418 3.582-8 8-8s8 3.582 8 8H4z" />
-          </svg>
-          Loading...
+         <AiOutlineLoading3Quarters />
         </span>
       ) : (
         <span className="flex items-center">
