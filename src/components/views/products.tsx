@@ -25,7 +25,6 @@ const Products: React.FC = () => {
 
   const { datas } = forms;
   console.log(datas);
-
   useEffect(() => {
     const fetchDatas = async () => {
       try {
